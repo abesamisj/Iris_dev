@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29255725-AA6F-4772-BA00-547E76F45A24}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IRIS_Dev</RootNamespace>
+    <AssemblyName>IRIS_Dev</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap-social.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\buttons.css" />
+    <Content Include="css\colors\blue.css" />
+    <Content Include="css\colors\dark-blue.css" />
+    <Content Include="css\colors\green.css" />
+    <Content Include="css\colors\pinkish.css" />
+    <Content Include="css\colors\purple.css" />
+    <Content Include="css\colors\red.css" />
+    <Content Include="css\colors\seagul.css" />
+    <Content Include="css\colors\silver.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\ionicons-cheatsheet.css" />
+    <Content Include="css\ionicons.min.css" />
+    <Content Include="css\jquery.snippet.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\royal_preloader.css" />
+    <Content Include="css\style-switcher.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\width-boxed.css" />
+    <Content Include="css\width-full.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="images\amigos-250x100.jpg" />
+    <Content Include="images\amigos.jpg" />
+    <Content Include="images\animation.jpg" />
+    <Content Include="images\avatar.jpg" />
+    <Content Include="images\backgrounds\bg1.png" />
+    <Content Include="images\backgrounds\bg10.jpg" />
+    <Content Include="images\backgrounds\bg11.jpg" />
+    <Content Include="images\backgrounds\bg12.jpg" />
+    <Content Include="images\backgrounds\bg13.jpg" />
+    <Content Include="images\backgrounds\bg14.jpg" />
+    <Content Include="images\backgrounds\bg15.jpg" />
+    <Content Include="images\backgrounds\bg16.jpg" />
+    <Content Include="images\backgrounds\bg17.jpg" />
+    <Content Include="images\backgrounds\bg18.jpg" />
+    <Content Include="images\backgrounds\bg2.jpg" />
+    <Content Include="images\backgrounds\bg3.jpg" />
+    <Content Include="images\backgrounds\bg4.jpg" />
+    <Content Include="images\backgrounds\bg5.jpg" />
+    <Content Include="images\backgrounds\bg6.jpg" />
+    <Content Include="images\backgrounds\bg7.jpg" />
+    <Content Include="images\backgrounds\bg8.jpg" />
+    <Content Include="images\backgrounds\bg9.jpg" />
+    <Content Include="images\backgrounds\chick-render.png" />
+    <Content Include="images\backgrounds\dude-render.png" />
+    <Content Include="images\backgrounds\showcase.png" />
+    <Content Include="images\backgrounds\stock1.jpg" />
+    <Content Include="images\backgrounds\stock10.jpg" />
+    <Content Include="images\backgrounds\stock11.jpg" />
+    <Content Include="images\backgrounds\stock12.jpg" />
+    <Content Include="images\backgrounds\stock13.jpg" />
+    <Content Include="images\backgrounds\stock14.jpg" />
+    <Content Include="images\backgrounds\stock2.jpg" />
+    <Content Include="images\backgrounds\stock3.jpg" />
+    <Content Include="images\backgrounds\stock4.jpg" />
+    <Content Include="images\backgrounds\stock5.jpg" />
+    <Content Include="images\backgrounds\stock6.jpg" />
+    <Content Include="images\backgrounds\stock7.jpg" />
+    <Content Include="images\backgrounds\stock8.jpg" />
+    <Content Include="images\backgrounds\stock9.jpg" />
+    <Content Include="images\bigbold_1-100x50.jpg" />
+    <Content Include="images\bigbold_1-280x43.jpg" />
+    <Content Include="images\bigbold_1.jpg" />
+    <Content Include="images\bigbold_2-280x43.jpg" />
+    <Content Include="images\bigbold_2.jpg" />
+    <Content Include="images\bigbold_3-100x50.jpg" />
+    <Content Include="images\bigbold_3.jpg" />
+    <Content Include="images\bike-100x50.jpg" />
+    <Content Include="images\bike-60x60.jpg" />
+    <Content Include="images\bike.jpg" />
+    <Content Include="images\bluebar.png" />
+    <Content Include="images\blurflake1.png" />
+    <Content Include="images\blurflake2.png" />
+    <Content Include="images\blurflake3.png" />
+    <Content Include="images\blurflake4.png" />
+    <Content Include="images\board-100x50.jpg" />
+    <Content Include="images\board.jpg" />
+    <Content Include="images\browserslide1.jpg" />
+    <Content Include="images\calbuco-250x100.jpg" />
+    <Content Include="images\calbuco.jpg" />
+    <Content Include="images\cameraicon.png" />
+    <Content Include="images\carousel_element_ipad.jpg" />
+    <Content Include="images\carousel_element_iphone.jpg" />
+    <Content Include="images\carousel_element_laptop.jpg" />
+    <Content Include="images\cc-logo.png" />
+    <Content Include="images\ceo.png" />
+    <Content Include="images\clickhere.png" />
+    <Content Include="images\contentarea.jpg" />
+    <Content Include="images\custombar.jpg" />
+    <Content Include="images\datcolor-100x50.jpg" />
+    <Content Include="images\datcolor-280x43.jpg" />
+    <Content Include="images\datcolor-60x60.jpg" />
+    <Content Include="images\datcolor-70x70.jpg" />
+    <Content Include="images\datcolor.jpg" />
+    <Content Include="images\desktopbg1-100x50.jpg" />
+    <Content Include="images\desktopbg1.jpg" />
+    <Content Include="images\drink_cover-100x50.jpg" />
+    <Content Include="images\drink_cover.jpg" />
+    <Content Include="images\dummy.png" />
+    <Content Include="images\editor_layers1.jpg" />
+    <Content Include="images\ellipse.png" />
+    <Content Include="images\examplebar3.jpg" />
+    <Content Include="images\examplelayer1.jpg" />
+    <Content Include="images\examplelayer2.jpg" />
+    <Content Include="images\examplelayer3.jpg" />
+    <Content Include="images\expresswhitelogo.png" />
+    <Content Include="images\express_bglight-100x50.jpg" />
+    <Content Include="images\express_bglight.jpg" />
+    <Content Include="images\express_ipad_content1.jpg" />
+    <Content Include="images\express_iphone_content1.jpg" />
+    <Content Include="images\express_lightlogo1.png" />
+    <Content Include="images\express_macbook_content1.jpg" />
+    <Content Include="images\ezlogo.png" />
+    <Content Include="images\fashion_bg1-100x50.jpg" />
+    <Content Include="images\font-awesome.png" />
+    <Content Include="images\help.png" />
+    <Content Include="images\iris_01.png" />
+    <Content Include="images\iris_02.jpg" />
+    <Content Include="images\iris_03.jpg" />
+    <Content Include="images\logo-white.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logos\backlight.png" />
+    <Content Include="images\logos\boomerang.png" />
+    <Content Include="images\logos\equi.png" />
+    <Content Include="images\logos\euro.png" />
+    <Content Include="images\logos\Letter_I_blue.ico" />
+    <Content Include="images\logos\Letter_I_green.ico" />
+    <Content Include="images\logos\Letter_I_pink.ico" />
+    <Content Include="images\logos\micro.png" />
+    <Content Include="images\logos\ome.png" />
+    <Content Include="images\logos\Red_Orb_Alphabet_Letter_I.ico" />
+    <Content Include="images\navigation\default-dark.jpg" />
+    <Content Include="images\navigation\default-regular.jpg" />
+    <Content Include="images\navigation\secondary-dark.jpg" />
+    <Content Include="images\navigation\secondary-regular.jpg" />
+    <Content Include="images\patterns\pattern1.png" />
+    <Content Include="images\patterns\pattern2.png" />
+    <Content Include="images\patterns\pattern3.png" />
+    <Content Include="images\patterns\pattern4.png" />
+    <Content Include="images\projects\illustration1.jpg" />
+    <Content Include="images\projects\illustration2.jpg" />
+    <Content Include="images\projects\illustration3.jpg" />
+    <Content Include="images\projects\print1.jpg" />
+    <Content Include="images\projects\print2.jpg" />
+    <Content Include="images\projects\print3.jpg" />
+    <Content Include="images\projects\thumbs\illustration1-crop.jpg" />
+    <Content Include="images\projects\thumbs\illustration1.jpg" />
+    <Content Include="images\projects\thumbs\illustration2-crop.jpg" />
+    <Content Include="images\projects\thumbs\illustration2.jpg" />
+    <Content Include="images\projects\thumbs\illustration3.jpg" />
+    <Content Include="images\projects\thumbs\print1-crop.jpg" />
+    <Content Include="images\projects\thumbs\print1.jpg" />
+    <Content Include="images\projects\thumbs\print2.jpg" />
+    <Content Include="images\projects\thumbs\print3.jpg" />
+    <Content Include="images\projects\thumbs\web1-crop.jpg" />
+    <Content Include="images\projects\thumbs\web1.jpg" />
+    <Content Include="images\projects\thumbs\web2.jpg" />
+    <Content Include="images\projects\thumbs\web3.jpg" />
+    <Content Include="images\projects\web1.jpg" />
+    <Content Include="images\projects\web2.jpg" />
+    <Content Include="images\projects\web3.jpg" />
+    <Content Include="images\shop\product-single1.jpg" />
+    <Content Include="images\shop\product-single2.jpg" />
+    <Content Include="images\shop\product-single3.jpg" />
+    <Content Include="images\shop\product1.jpg" />
+    <Content Include="images\shop\product2.jpg" />
+    <Content Include="images\shop\product3.jpg" />
+    <Content Include="images\shop\product4.jpg" />
+    <Content Include="images\shop\product5.jpg" />
+    <Content Include="images\shop\product6.jpg" />
+    <Content Include="images\shop\product7.jpg" />
+    <Content Include="images\shop\product8.jpg" />
+    <Content Include="images\showcase-full.png" />
+    <Content Include="images\showcase.png" />
+    <Content Include="images\showcase2.png" />
+    <Content Include="images\showcase3.png" />
+    <Content Include="images\showcase4.png" />
+    <Content Include="images\team-member-1.jpg" />
+    <Content Include="images\team-member-2.jpg" />
+    <Content Include="images\team-member-3.jpg" />
+    <Content Include="images\team-member-4.jpg" />
+    <Content Include="js\activate-snippet.js" />
+    <Content Include="js\bootstrap-dropdownhover.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\buttons.js" />
+    <Content Include="js\hover-dropdown.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.fitvids.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.mixitup.min.js" />
+    <Content Include="js\jquery.snippet.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\royal_preloader.min.js" />
+    <Content Include="js\scrollReveal.js" />
+    <Content Include="js\skrollr.min.js" />
+    <Content Include="js\style-switcher.js" />
+    <Content Include="revolution\assets\coloredbg.png" />
+    <Content Include="revolution\assets\css\noneed.css" />
+    <Content Include="revolution\assets\gridimages\carousel_classic1.jpg" />
+    <Content Include="revolution\assets\gridimages\carousel_highlight1.jpg" />
+    <Content Include="revolution\assets\gridimages\carousel_instagram1.jpg" />
+    <Content Include="revolution\assets\gridimages\carousel_media1.jpg" />
+    <Content Include="revolution\assets\gridimages\carousel_photography1.jpg" />
+    <Content Include="revolution\assets\gridimages\carousel_showcase1.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_image1.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_newscollection.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_newsletter1.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_searchform.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_sports1.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_vimeo1.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_webproductdark.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_webproductlight.jpg" />
+    <Content Include="revolution\assets\gridimages\hero_youtube1.jpg" />
+    <Content Include="revolution\assets\gridimages\premium1_content_zoom.jpg" />
+    <Content Include="revolution\assets\gridimages\premium2_big_bold.jpg" />
+    <Content Include="revolution\assets\gridimages\premium3_food_carousel.jpg" />
+    <Content Include="revolution\assets\gridimages\premium_rotatingwords.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_classic1.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_classicfull.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_facebook.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_fancytext.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_fashion.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_flickr.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_generic.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_gym.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_highlight1.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_levano.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_media.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_news.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_photography.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_twitter.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_vimeo.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_webproductdark.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_webproductlight.jpg" />
+    <Content Include="revolution\assets\gridimages\slider_youtube.jpg" />
+    <Content Include="revolution\assets\gridimages\travelslider.jpg" />
+    <Content Include="revolution\assets\gridtile.png" />
+    <Content Include="revolution\assets\gridtile_3x3.png" />
+    <Content Include="revolution\assets\gridtile_3x3_white.png" />
+    <Content Include="revolution\assets\gridtile_white.png" />
+    <Content Include="revolution\assets\images\amigos-250x100.jpg" />
+    <Content Include="revolution\assets\images\amigos.jpg" />
+    <Content Include="revolution\assets\images\animation.jpg" />
+    <Content Include="revolution\assets\images\bigbold_1-100x50.jpg" />
+    <Content Include="revolution\assets\images\bigbold_1-280x43.jpg" />
+    <Content Include="revolution\assets\images\bigbold_1.jpg" />
+    <Content Include="revolution\assets\images\bigbold_2-280x43.jpg" />
+    <Content Include="revolution\assets\images\bigbold_2.jpg" />
+    <Content Include="revolution\assets\images\bigbold_3-100x50.jpg" />
+    <Content Include="revolution\assets\images\bigbold_3.jpg" />
+    <Content Include="revolution\assets\images\bike-100x50.jpg" />
+    <Content Include="revolution\assets\images\bike-60x60.jpg" />
+    <Content Include="revolution\assets\images\bike.jpg" />
+    <Content Include="revolution\assets\images\bluebar.png" />
+    <Content Include="revolution\assets\images\blurflake1.png" />
+    <Content Include="revolution\assets\images\blurflake2.png" />
+    <Content Include="revolution\assets\images\blurflake3.png" />
+    <Content Include="revolution\assets\images\blurflake4.png" />
+    <Content Include="revolution\assets\images\board-100x50.jpg" />
+    <Content Include="revolution\assets\images\board.jpg" />
+    <Content Include="revolution\assets\images\browserslide1.jpg" />
+    <Content Include="revolution\assets\images\calbuco-250x100.jpg" />
+    <Content Include="revolution\assets\images\calbuco.jpg" />
+    <Content Include="revolution\assets\images\cameraicon.png" />
+    <Content Include="revolution\assets\images\carousel_element_ipad.jpg" />
+    <Content Include="revolution\assets\images\carousel_element_iphone.jpg" />
+    <Content Include="revolution\assets\images\carousel_element_laptop.jpg" />
+    <Content Include="revolution\assets\images\cc-logo.png" />
+    <Content Include="revolution\assets\images\clickhere.png" />
+    <Content Include="revolution\assets\images\contentarea.jpg" />
+    <Content Include="revolution\assets\images\custombar.jpg" />
+    <Content Include="revolution\assets\images\datcolor-100x50.jpg" />
+    <Content Include="revolution\assets\images\datcolor-280x43.jpg" />
+    <Content Include="revolution\assets\images\datcolor-60x60.jpg" />
+    <Content Include="revolution\assets\images\datcolor-70x70.jpg" />
+    <Content Include="revolution\assets\images\datcolor.jpg" />
+    <Content Include="revolution\assets\images\desktopbg1-100x50.jpg" />
+    <Content Include="revolution\assets\images\desktopbg1.jpg" />
+    <Content Include="revolution\assets\images\drink_cover-100x50.jpg" />
+    <Content Include="revolution\assets\images\drink_cover.jpg" />
+    <Content Include="revolution\assets\images\dummy.png" />
+    <Content Include="revolution\assets\images\editor_layers1.jpg" />
+    <Content Include="revolution\assets\images\ellipse.png" />
+    <Content Include="revolution\assets\images\examplebar3.jpg" />
+    <Content Include="revolution\assets\images\examplelayer1.jpg" />
+    <Content Include="revolution\assets\images\examplelayer2.jpg" />
+    <Content Include="revolution\assets\images\examplelayer3.jpg" />
+    <Content Include="revolution\assets\images\expresswhitelogo.png" />
+    <Content Include="revolution\assets\images\express_bglight-100x50.jpg" />
+    <Content Include="revolution\assets\images\express_bglight.jpg" />
+    <Content Include="revolution\assets\images\express_ipad_content1.jpg" />
+    <Content Include="revolution\assets\images\express_iphone_content1.jpg" />
+    <Content Include="revolution\assets\images\express_lightlogo1.png" />
+    <Content Include="revolution\assets\images\express_macbook_content1.jpg" />
+    <Content Include="revolution\assets\images\ezlogo.png" />
+    <Content Include="revolution\assets\images\fashion_bg1-100x50.jpg" />
+    <Content Include="revolution\assets\images\fashion_bg1.jpg" />
+    <Content Include="revolution\assets\images\fashion_bg2_big.jpg" />
+    <Content Include="revolution\assets\images\fashion_bg3.jpg" />
+    <Content Include="revolution\assets\images\fashion_bg4.jpg" />
+    <Content Include="revolution\assets\images\fashion_white.png" />
+    <Content Include="revolution\assets\images\feature_girl.jpg" />
+    <Content Include="revolution\assets\images\fitness-100x50.jpg" />
+    <Content Include="revolution\assets\images\fitness-60x60.jpg" />
+    <Content Include="revolution\assets\images\fitness.jpg" />
+    <Content Include="revolution\assets\images\food1-150x100.jpg" />
+    <Content Include="revolution\assets\images\food1.jpg" />
+    <Content Include="revolution\assets\images\food2-150x100.jpg" />
+    <Content Include="revolution\assets\images\food2.jpg" />
+    <Content Include="revolution\assets\images\food3-150x100.jpg" />
+    <Content Include="revolution\assets\images\food3.jpg" />
+    <Content Include="revolution\assets\images\food4-150x100.jpg" />
+    <Content Include="revolution\assets\images\food4.jpg" />
+    <Content Include="revolution\assets\images\food5-150x100.jpg" />
+    <Content Include="revolution\assets\images\food5.jpg" />
+    <Content Include="revolution\assets\images\food6-150x100.jpg" />
+    <Content Include="revolution\assets\images\food6.jpg" />
+    <Content Include="revolution\assets\images\frontpage_element_ipad.jpg" />
+    <Content Include="revolution\assets\images\frontpage_element_iphone.jpg" />
+    <Content Include="revolution\assets\images\frontpage_element_laptop.jpg" />
+    <Content Include="revolution\assets\images\generic-icon.png" />
+    <Content Include="revolution\assets\images\girl.jpg" />
+    <Content Include="revolution\assets\images\girls-100x50.jpg" />
+    <Content Include="revolution\assets\images\girls.jpg" />
+    <Content Include="revolution\assets\images\greenstripe.png" />
+    <Content Include="revolution\assets\images\guy.jpg" />
+    <Content Include="revolution\assets\images\gym1-100x50.jpg" />
+    <Content Include="revolution\assets\images\gym1.jpg" />
+    <Content Include="revolution\assets\images\gym2-100x50.jpg" />
+    <Content Include="revolution\assets\images\gym2.jpg" />
+    <Content Include="revolution\assets\images\gymlogo.png" />
+    <Content Include="revolution\assets\images\hand.jpg" />
+    <Content Include="revolution\assets\images\hero_element_ipad.jpg" />
+    <Content Include="revolution\assets\images\hero_element_iphone.jpg" />
+    <Content Include="revolution\assets\images\hero_element_laptop.jpg" />
+    <Content Include="revolution\assets\images\iceberg-100x50.jpg" />
+    <Content Include="revolution\assets\images\iceberg-250x100.jpg" />
+    <Content Include="revolution\assets\images\iceberg.jpg" />
+    <Content Include="revolution\assets\images\icon_download.png" />
+    <Content Include="revolution\assets\images\ihpone.png" />
+    <Content Include="revolution\assets\images\ihpone_dark.png" />
+    <Content Include="revolution\assets\images\ipad.png" />
+    <Content Include="revolution\assets\images\ipad_dark.png" />
+    <Content Include="revolution\assets\images\lambo-100x50.jpg" />
+    <Content Include="revolution\assets\images\lambo-60x60.jpg" />
+    <Content Include="revolution\assets\images\lambo.jpg" />
+    <Content Include="revolution\assets\images\landscape-100x50.jpg" />
+    <Content Include="revolution\assets\images\landscape-280x43.jpg" />
+    <Content Include="revolution\assets\images\landscape.jpg" />
+    <Content Include="revolution\assets\images\lightbg-100x50.png" />
+    <Content Include="revolution\assets\images\lightbg.png" />
+    <Content Include="revolution\assets\images\loader.php" />
+    <Content Include="revolution\assets\images\logo.png" />
+    <Content Include="revolution\assets\images\macbookpro.png" />
+    <Content Include="revolution\assets\images\mainslider_element2.png" />
+    <Content Include="revolution\assets\images\mainslider_element3.png" />
+    <Content Include="revolution\assets\images\media1-250x100.jpg" />
+    <Content Include="revolution\assets\images\media1-280x43.jpg" />
+    <Content Include="revolution\assets\images\media1.jpg" />
+    <Content Include="revolution\assets\images\mountainbg-100x50.jpg" />
+    <Content Include="revolution\assets\images\mountainbg.jpg" />
+    <Content Include="revolution\assets\images\muesli-150x100.jpg" />
+    <Content Include="revolution\assets\images\muesli.jpg" />
+    <Content Include="revolution\assets\images\newscarousel1-100x50.jpg" />
+    <Content Include="revolution\assets\images\newscarousel1.jpg" />
+    <Content Include="revolution\assets\images\newscarousel2-100x50.jpg" />
+    <Content Include="revolution\assets\images\newscarousel2-280x43.jpg" />
+    <Content Include="revolution\assets\images\newscarousel2.jpg" />
+    <Content Include="revolution\assets\images\newscarousel4-100x50.jpg" />
+    <Content Include="revolution\assets\images\newscarousel4-280x43.jpg" />
+    <Content Include="revolution\assets\images\newscarousel4.jpg" />
+    <Content Include="revolution\assets\images\newscarousel5-100x50.jpg" />
+    <Content Include="revolution\assets\images\newscarousel5-280x43.jpg" />
+    <Content Include="revolution\assets\images\newscarousel5.jpg" />
+    <Content Include="revolution\assets\images\newscarousel6-100x50.jpg" />
+    <Content Include="revolution\assets\images\newscarousel6-280x43.jpg" />
+    <Content Include="revolution\assets\images\newscarousel6-60x60.jpg" />
+    <Content Include="revolution\assets\images\newscarousel6.jpg" />
+    <Content Include="revolution\assets\images\newsmag.jpg" />
+    <Content Include="revolution\assets\images\newsmag_large.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg1-100x50.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg1.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg2-100x50.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg2-280x43.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg2.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg3-100x50.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg3-280x43.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg3-320x160.jpg" />
+    <Content Include="revolution\assets\images\newspaper_bg3.jpg" />
+    <Content Include="revolution\assets\images\notgenericherobg-100x50.jpg" />
+    <Content Include="revolution\assets\images\notgenericherobg-280x43.jpg" />
+    <Content Include="revolution\assets\images\notgenericherobg-70x70.jpg" />
+    <Content Include="revolution\assets\images\notgenericherobg.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg1-100x50.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg1.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg2-100x50.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg2-280x43.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg2-70x70.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg2.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg3-100x50.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg3-280x43.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg3-70x70.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg3.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg5-100x50.jpg" />
+    <Content Include="revolution\assets\images\notgeneric_bg5.jpg" />
+    <Content Include="revolution\assets\images\officeloop_cover-100x50.jpg" />
+    <Content Include="revolution\assets\images\officeloop_cover.jpg" />
+    <Content Include="revolution\assets\images\office_cover-100x50.jpg" />
+    <Content Include="revolution\assets\images\office_cover.jpg" />
+    <Content Include="revolution\assets\images\pagelogo.png" />
+    <Content Include="revolution\assets\images\parallaxbgcut.jpg" />
+    <Content Include="revolution\assets\images\phone1-60x60.png" />
+    <Content Include="revolution\assets\images\phone1.png" />
+    <Content Include="revolution\assets\images\phone2-60x60.png" />
+    <Content Include="revolution\assets\images\phone2.png" />
+    <Content Include="revolution\assets\images\phone3-60x60.png" />
+    <Content Include="revolution\assets\images\phone3.png" />
+    <Content Include="revolution\assets\images\phone4-60x60.png" />
+    <Content Include="revolution\assets\images\phone4.png" />
+    <Content Include="revolution\assets\images\phone5-60x60.png" />
+    <Content Include="revolution\assets\images\phone5.png" />
+    <Content Include="revolution\assets\images\phone6-60x60.png" />
+    <Content Include="revolution\assets\images\phone6.png" />
+    <Content Include="revolution\assets\images\phone7-60x60.png" />
+    <Content Include="revolution\assets\images\phone7.png" />
+    <Content Include="revolution\assets\images\phone8-60x60.png" />
+    <Content Include="revolution\assets\images\phone8.png" />
+    <Content Include="revolution\assets\images\phone9-60x60.png" />
+    <Content Include="revolution\assets\images\phone9.png" />
+    <Content Include="revolution\assets\images\photography1-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography1.jpg" />
+    <Content Include="revolution\assets\images\photography2-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography2-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography2.jpg" />
+    <Content Include="revolution\assets\images\photography3-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography3-280x43.jpg" />
+    <Content Include="revolution\assets\images\photography3.jpg" />
+    <Content Include="revolution\assets\images\photography4-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography4-280x43.jpg" />
+    <Content Include="revolution\assets\images\photography4-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography4.jpg" />
+    <Content Include="revolution\assets\images\photography5-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography5.jpg" />
+    <Content Include="revolution\assets\images\photography6-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography6-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography6.jpg" />
+    <Content Include="revolution\assets\images\photography7-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography7-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography7.jpg" />
+    <Content Include="revolution\assets\images\photography8-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography8-280x43.jpg" />
+    <Content Include="revolution\assets\images\photography8.jpg" />
+    <Content Include="revolution\assets\images\photography9-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography9-280x43.jpg" />
+    <Content Include="revolution\assets\images\photography9-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography9-60x60.jpg" />
+    <Content Include="revolution\assets\images\photography9.jpg" />
+    <Content Include="revolution\assets\images\photography_contact-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography_contact-280x43.jpg" />
+    <Content Include="revolution\assets\images\photography_contact-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography_contact.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb1.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb2.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb3-100x50.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb3-320x160.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb3.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb4.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb5.jpg" />
+    <Content Include="revolution\assets\images\photography_thumb6.jpg" />
+    <Content Include="revolution\assets\images\pierbg-100x50.jpg" />
+    <Content Include="revolution\assets\images\pierbg.jpg" />
+    <Content Include="revolution\assets\images\premiumbg1-100x50.jpg" />
+    <Content Include="revolution\assets\images\premiumbg1.jpg" />
+    <Content Include="revolution\assets\images\premiumdiamond.png" />
+    <Content Include="revolution\assets\images\publishslide.jpg" />
+    <Content Include="revolution\assets\images\restaurant_bg_1-100x50.jpg" />
+    <Content Include="revolution\assets\images\restaurant_bg_1.jpg" />
+    <Content Include="revolution\assets\images\restaurant_bg_2-100x50.jpg" />
+    <Content Include="revolution\assets\images\restaurant_bg_2.jpg" />
+    <Content Include="revolution\assets\images\restaurant_bg_3-100x50.jpg" />
+    <Content Include="revolution\assets\images\restaurant_bg_3.jpg" />
+    <Content Include="revolution\assets\images\restaurant_logo1.png" />
+    <Content Include="revolution\assets\images\shortcode.png" />
+    <Content Include="revolution\assets\images\slider_element_ipad1.jpg" />
+    <Content Include="revolution\assets\images\slider_element_iphone.jpg" />
+    <Content Include="revolution\assets\images\slider_element_laptop.jpg" />
+    <Content Include="revolution\assets\images\slider_faqs.jpg" />
+    <Content Include="revolution\assets\images\slider_templates.jpg" />
+    <Content Include="revolution\assets\images\slider_tickets.jpg" />
+    <Content Include="revolution\assets\images\space_cover-250x100.jpg" />
+    <Content Include="revolution\assets\images\space_cover.jpg" />
+    <Content Include="revolution\assets\images\sports2.jpg" />
+    <Content Include="revolution\assets\images\sports_sublinebg.png" />
+    <Content Include="revolution\assets\images\supportedsocial.png" />
+    <Content Include="revolution\assets\images\timelines1.jpg" />
+    <Content Include="revolution\assets\images\touchit-100x50.jpg" />
+    <Content Include="revolution\assets\images\touchit-280x43.jpg" />
+    <Content Include="revolution\assets\images\touchit-60x60.jpg" />
+    <Content Include="revolution\assets\images\touchit.jpg" />
+    <Content Include="revolution\assets\images\tplogo_black.png" />
+    <Content Include="revolution\assets\images\transparent.png" />
+    <Content Include="revolution\assets\images\travel1-100x50.jpg" />
+    <Content Include="revolution\assets\images\travel1-280x43.jpg" />
+    <Content Include="revolution\assets\images\travel1-70x70.jpg" />
+    <Content Include="revolution\assets\images\travel1.jpg" />
+    <Content Include="revolution\assets\images\travel2-100x50.jpg" />
+    <Content Include="revolution\assets\images\travel2-280x43.jpg" />
+    <Content Include="revolution\assets\images\travel2.jpg" />
+    <Content Include="revolution\assets\images\travel3-100x50.jpg" />
+    <Content Include="revolution\assets\images\travel3-280x43.jpg" />
+    <Content Include="revolution\assets\images\travel3.jpg" />
+    <Content Include="revolution\assets\images\travel4-100x50.jpg" />
+    <Content Include="revolution\assets\images\travel4-280x43.jpg" />
+    <Content Include="revolution\assets\images\travel4-70x70.jpg" />
+    <Content Include="revolution\assets\images\travel4.jpg" />
+    <Content Include="revolution\assets\images\typing_cover-100x50.jpg" />
+    <Content Include="revolution\assets\images\typing_cover.jpg" />
+    <Content Include="revolution\assets\images\video.jpg" />
+    <Content Include="revolution\assets\images\vimeobg-100x50.jpg" />
+    <Content Include="revolution\assets\images\vimeobg.jpg" />
+    <Content Include="revolution\assets\images\webproduct_darkbg1.jpg" />
+    <Content Include="revolution\assets\images\webproduct_darkbg2.jpg" />
+    <Content Include="revolution\assets\images\webproduct_darkbg3.jpg" />
+    <Content Include="revolution\assets\images\workspace.jpg" />
+    <Content Include="revolution\assets\images\workspace_large.jpg" />
+    <Content Include="revolution\assets\images\youtube1_cover-250x100.jpg" />
+    <Content Include="revolution\assets\images\youtube1_cover.jpg" />
+    <Content Include="revolution\assets\images\youtubebg-100x50.jpg" />
+    <Content Include="revolution\assets\images\youtubebg.jpg" />
+    <Content Include="revolution\assets\loader.gif" />
+    <Content Include="revolution\assets\sources\fb.png" />
+    <Content Include="revolution\assets\sources\fr.png" />
+    <Content Include="revolution\assets\sources\ig.png" />
+    <Content Include="revolution\assets\sources\post.png" />
+    <Content Include="revolution\assets\sources\revolution_slide1.png" />
+    <Content Include="revolution\assets\sources\revolution_slide2.png" />
+    <Content Include="revolution\assets\sources\tw.png" />
+    <Content Include="revolution\assets\sources\vm.png" />
+    <Content Include="revolution\assets\sources\wc.png" />
+    <Content Include="revolution\assets\sources\yt.png" />
+    <Content Include="revolution\assets\videos\drink.mp4" />
+    <Content Include="revolution\assets\videos\fit_edit.mp4" />
+    <Content Include="revolution\assets\videos\girls.mp4" />
+    <Content Include="revolution\assets\videos\iceberg.mp4" />
+    <Content Include="revolution\assets\videos\officeloop_low.mp4" />
+    <Content Include="revolution\assets\videos\space.mp4" />
+    <Content Include="revolution\assets\videos\typing.mp4" />
+    <Content Include="revolution\assets\videos\Working-Space.mp4" />
+    <Content Include="revolution\css\closedhand.cur" />
+    <Content Include="revolution\css\index.php" />
+    <Content Include="revolution\css\layers.css" />
+    <Content Include="revolution\css\navigation-skins\ares.css" />
+    <Content Include="revolution\css\navigation-skins\custom.css" />
+    <Content Include="revolution\css\navigation-skins\dione.css" />
+    <Content Include="revolution\css\navigation-skins\erinyen.css" />
+    <Content Include="revolution\css\navigation-skins\gyges.css" />
+    <Content Include="revolution\css\navigation-skins\hades.css" />
+    <Content Include="revolution\css\navigation-skins\hebe.css" />
+    <Content Include="revolution\css\navigation-skins\hephaistos.css" />
+    <Content Include="revolution\css\navigation-skins\hermes.css" />
+    <Content Include="revolution\css\navigation-skins\hesperiden.css" />
+    <Content Include="revolution\css\navigation-skins\metis.css" />
+    <Content Include="revolution\css\navigation-skins\persephone.css" />
+    <Content Include="revolution\css\navigation-skins\uranus.css" />
+    <Content Include="revolution\css\navigation-skins\zeus.css" />
+    <Content Include="revolution\css\navigation.css" />
+    <Content Include="revolution\css\openhand.cur" />
+    <Content Include="revolution\css\settings.css" />
+    <Content Include="revolution\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="revolution\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="revolution\fonts\font-awesome\css\index.php" />
+    <Content Include="revolution\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="revolution\fonts\font-awesome\fonts\index.php" />
+    <Content Include="revolution\fonts\font-awesome\index.php" />
+    <Content Include="revolution\fonts\index.php" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\css\helper.css" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\css\index.php" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\css\pe-icon-7-stroke.css" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\fonts\index.php" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\index.php" />
+    <Content Include="revolution\fonts\revicons\index.php" />
+    <Content Include="revolution\fonts\revicons\revicons.svg" />
+    <Content Include="revolution\js\extensions\index.php" />
+    <Content Include="revolution\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="revolution\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="revolution\js\extensions\source\index.php" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.actions.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.carousel.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.kenburn.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.layeranimation.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.migration.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.navigation.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.parallax.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.slideanims.js" />
+    <Content Include="revolution\js\extensions\source\revolution.extension.video.js" />
+    <Content Include="revolution\js\index.php" />
+    <Content Include="revolution\js\jquery.themepunch.enablelog.js" />
+    <Content Include="revolution\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="revolution\js\jquery.themepunch.tools.min.js" />
+    <Content Include="revolution\js\source\index.php" />
+    <Content Include="revolution\js\source\jquery.themepunch.enablelog.js" />
+    <Content Include="revolution\js\source\jquery.themepunch.revolution.js" />
+    <Content Include="revolution\js\source\jquery.themepunch.tools.min.js" />
+    <Content Include="revolution\php\facebook\class-facebook.php" />
+    <Content Include="revolution\php\flickr\class-flickr.php" />
+    <Content Include="revolution\php\instagram\class-instagram.php" />
+    <Content Include="revolution\php\twitter\class-twitter.php" />
+    <Content Include="revolution\php\twitter\connection\Application.php" />
+    <Content Include="revolution\php\twitter\connection\ConnectionAbstract.php" />
+    <Content Include="revolution\php\twitter\connection\User.php" />
+    <Content Include="revolution\php\twitter\RestApi.php" />
+    <Content Include="revolution\php\vimeo\class-vimeo.php" />
+    <Content Include="revolution\php\youtube\class-youtube.php" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="revolution\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="revolution\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="revolution\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="revolution\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="revolution\fonts\pe-icon-7-stroke\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="revolution\fonts\revicons\revicons.eot" />
+    <Content Include="revolution\fonts\revicons\revicons.ttf" />
+    <Content Include="revolution\fonts\revicons\revicons.woff" />
+    <None Include="Properties\PublishProfiles\irissystemsent-dev.pubxml" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="videos\girls.mp4" />
+    <Content Include="videos\officeloop_low.mp4" />
+    <Content Include="videos\Working-Space.mp4" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61859</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61859/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
