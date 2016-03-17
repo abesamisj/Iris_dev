@@ -811,6 +811,7 @@
     <Content Include="revolution\fonts\revicons\revicons.eot" />
     <Content Include="revolution\fonts\revicons\revicons.ttf" />
     <Content Include="revolution\fonts\revicons\revicons.woff" />
+    <None Include="Properties\PublishProfiles\irissystemsent-dev %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\irissystemsent-dev.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
