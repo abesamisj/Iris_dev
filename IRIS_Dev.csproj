@@ -256,6 +256,12 @@
     <Content Include="images\cc-logo.png" />
     <Content Include="images\ceo.png" />
     <Content Include="images\clickhere.png" />
+    <Content Include="images\clients\bizulogo.png" />
+    <Content Include="images\clients\heraldsuites.png" />
+    <Content Include="images\clients\pancakehouselogo.png" />
+    <Content Include="images\clients\stackerslogo.png" />
+    <Content Include="images\clients\teriyakiboylogo.png" />
+    <Content Include="images\clients\vivereHotellogo.png" />
     <Content Include="images\contentarea.jpg" />
     <Content Include="images\custombar.jpg" />
     <Content Include="images\datcolor-100x50.jpg" />
@@ -308,6 +314,12 @@
     <Content Include="images\patterns\pattern2.png" />
     <Content Include="images\patterns\pattern3.png" />
     <Content Include="images\patterns\pattern4.png" />
+    <Content Include="images\products\BC-2028.jpg" />
+    <Content Include="images\products\BC-300.jpg" />
+    <Content Include="images\products\cameralist.jpg" />
+    <Content Include="images\products\cameralist2.jpg" />
+    <Content Include="images\products\depositorysafe.png" />
+    <Content Include="images\products\fireproofdigitalsafes.png" />
     <Content Include="images\projects\illustration1.jpg" />
     <Content Include="images\projects\illustration2.jpg" />
     <Content Include="images\projects\illustration3.jpg" />
@@ -838,6 +850,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

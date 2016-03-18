@@ -1,0 +1,256 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Begin Content Section -->
+<section class="mt40 mb20">
+    <div id="portfolio" class="container">
+
+        <!-- Begin Title -->
+        <div class="row" data-sr="enter right">
+            <div class="col-xs-4 col-xs-offset-4 text-center mb10">
+                <div class="heading"><h4>Our Products</h4></div>
+            </div>
+        </div>
+
+        <!-- Portfolio Filter -->
+        @*<div data-sr="enter left" class="row mb30">
+            <ul class="nav nav-pills col-xs-12 text-center">
+                <li class="filter" data-filter="all">All</li>
+                <li class="filter" data-filter="print">Print</li>
+                <li class="filter" data-filter="web">Web</li>
+                <li class="filter" data-filter="illustration">Illustration</li>
+            </ul>
+        </div>*@
+
+        <!-- Portfolio Items -->
+        <div class="row">
+            <ul id="myPortfolio" class="col-sm-12 no-padding text-center">
+                <!-- Begin Item 1 -->
+                <li onclick="" class="item illustration col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/products/depositorysafe.png" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/products/depositorysafe.png" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title">Depository Safes</h3>
+                            <div class="project-category">Safes</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 1 -->
+                <!-- Item 2 -->
+                <li onclick="" class="item web col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/products/fireproofdigitalsafes.png" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/products/fireproofdigitalsafes.png" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title">Fireproof Digital Safes</h3>
+                            <div class="project-category">Safes</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 2 -->
+                @*<!-- Item 3 -->
+                <li onclick="" class="item print col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/print1.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/print1.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Metal</a></h3>
+                            <div class="project-category">Print</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 3 -->
+                <!-- Item 4 -->
+                <li onclick="" class="item illustration col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/illustration2.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/illustration2.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Bridge</a></h3>
+                            <div class="project-category">Illustration</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 4 -->
+                <!-- Item 5 -->
+                <li onclick="" class="item print col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/print2.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/print2.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Camera</a></h3>
+                            <div class="project-category">Print</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 5 -->
+                <!-- Item 6 -->
+                <li onclick="" class="item web col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/web3.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/web3.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Our City</a></h3>
+                            <div class="project-category">Web</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 6 -->
+                <!-- Item 7 -->
+                <li onclick="" class="item illustration col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/illustration3.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/illustration3.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Eary</a></h3>
+                            <div class="project-category">Illustration</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 7 -->
+                <!-- Item 8 -->
+                <li onclick="" class="item web col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/web2.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/web2.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Happyus</a></h3>
+                            <div class="project-category">Web</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 8 -->
+                <!-- Item 9 -->
+                <li onclick="" class="item print col-sm-4">
+                    <div class="border">
+                        <div class="view port-borderless image-hover-1">
+                            <!-- Project Thumb -->
+                            <img class="img-responsive" src="~/images/projects/thumbs/print3.jpg" alt="..." />
+                            <div class="mask">
+                                <div class="image-hover-content">
+                                    <!-- Zoom + Project Link -->
+                                    <a href="~/images/projects/print3.jpg" class="info image-zoom-link">
+                                        <div class="image-icon-holder"><span class="ion-ios7-search image-icons"></span></div>
+                                    </a>
+                                    <a href="portfolio-single-project.html" class="info">
+                                        <div class="image-icon-holder"><span class="ion-link image-icons"></span></div>
+                                    </a>
+                                </div><!-- /portfolio hover content -->
+                            </div><!-- /mask-->
+                        </div><!-- /portfolio hover -->
+                        <div class="portfolio-text background-white">
+                            <h3 class="portfolio-title"><a href="portfolio-single-project.html">Material</a></h3>
+                            <div class="project-category">Print</div>
+                        </div>
+                    </div>
+                </li><!-- /list item -->
+                <!-- End Item 9 -->*@
+
+            </ul><!-- /portfolio ul -->
+        </div><!-- /row -->
+
+    </div><!-- /container -->
+</section><!-- /content -->
+<!-- End Content Section -->

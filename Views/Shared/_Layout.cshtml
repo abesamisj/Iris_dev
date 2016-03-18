@@ -69,11 +69,11 @@
     <div id="royal_preloader"></div>
 
     <!-- Start Switcher -->
-    <div class="demo_changer">
+   @*<div class="demo_changer">
         <div class="demo-icon">
             <i class="fa fa-cog fa-spin fa-2x"></i>
         </div><!-- End opener icon -->
-        @*<div class="form_holder">
+        <div class="form_holder">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="predefined_styles">
@@ -97,8 +97,8 @@
                         </div><!-- End predefined_styles -->
                     </div><!-- End col -->
                 </div><!-- End row -->
-            </div>*@<!-- End form_holder -->
-    </div><!-- End demo_changer -->
+            </div><!-- End form_holder -->
+    </div><!-- End demo_changer -->*@
     <!-- End Switcher -->
     <div id="bg-boxed">
         <div class="boxed">
@@ -163,6 +163,7 @@
                                         <li class="dropdown dropdown-main">
                                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                                         <li>@Html.ActionLink("About", "About", "Home")</li>
+                                        <li>@Html.ActionLink("Products", "Products", "Home")</li>
                                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                                     </ul><!-- /navbar right -->
                                 </nav><!-- /nav -->
@@ -235,20 +236,25 @@
 
                         <!-- Recent Work -->
                         <div class="col-sm-3 hidden-xs">
-                            <div class="heading-footer"><h4>Clients</h4></div>
-                            <div class="col-xs-4 recent-work-padding">
-                                <a href="images/projects/web2.jpg" class="thumbnail image-zoom-link">
-                                    <img src="images/projects/thumbs/web2.jpg" alt="..." class="thumbnail img-responsive">
+                            <div class="heading-footer"><h4>Products</h4></div>
+                            <div class="col-xs-2 recent-work-padding">
+                                <a href="~/images/products/cameralist.jpg" class="thumbnail image-zoom-link">
+                                    <img src="~/images/products/cameralist.jpg" alt="..." class="thumbnail img-responsive">
                                 </a>
                             </div>
-                            <div class="col-xs-4 recent-work-padding">
-                                <a href="images/projects/web3.jpg" class="thumbnail image-zoom-link">
-                                    <img src="images/projects/thumbs/web3.jpg" alt="..." class="thumbnail img-responsive">
+                            <div class="col-xs-2 recent-work-padding">
+                                <a href="~/images/products/cameralist2.jpg" class="thumbnail image-zoom-link">
+                                    <img src="~/images/products/cameralist2.jpg" alt="..." class="thumbnail img-responsive">
                                 </a>
                             </div>
-                            <div class="col-xs-4 recent-work-padding">
-                                <a href="images/projects/illustration1.jpg" class="thumbnail image-zoom-link">
-                                    <img src="images/projects/thumbs/illustration1.jpg" alt="..." class="thumbnail img-responsive">
+                            <div class="col-xs-2 recent-work-padding">
+                                <a href="~/images/products/BC-2028.jpg" class="thumbnail image-zoom-link">
+                                    <img src="~/images/products/BC-2028.jpg" alt="..." class="thumbnail img-responsive">
+                                </a>
+                            </div>
+                            <div class="col-xs-2 recent-work-padding">
+                                <a href="~/images/products/BC-300.jpg" class="thumbnail image-zoom-link">
+                                    <img src="~/images/products/BC-300.jpg" alt="..." class="thumbnail img-responsive">
                                 </a>
                             </div>
                         </div>
